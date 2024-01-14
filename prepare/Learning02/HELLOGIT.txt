@@ -11,3 +11,31 @@ string question1 = "What is your first name?";
         else{
             System.Console.WriteLine("You're Old");
         }
+
+
+
+   if (number > 90)
+        {
+            Console.WriteLine(grd + "A");
+            Console.WriteLine(congrats);
+        } 
+        else if (number > 80 && number < 90)
+        {
+            Console.WriteLine(grd + "B");
+            Console.WriteLine(congrats);
+        }
+        else if (number > 70 && number < 80)
+        {
+            Console.WriteLine(grd + "C");
+            Console.WriteLine(congrats);
+        }
+        else if (number > 60 && number < 70)
+        {
+            Console.WriteLine(grd + "D");
+            Console.WriteLine(encourage);
+        }
+        else
+        {
+            Console.WriteLine(grd + "F");
+            Console.WriteLine(encourage);
+        }
