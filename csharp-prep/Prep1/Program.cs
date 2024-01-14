@@ -4,28 +4,17 @@ using System.Net;
 class Program
 {
     static void Main(string[] args)
-    {
-        string myName = "Peterson";
+    {   //First Name Question and Response
+        string question1 = "What is your first name?";
+        Console.Write(question1 + " ");
+        var firstName = Console.ReadLine();
 
-        Console.WriteLine("A Name: " + myName);
+        //Last Names Question and Response
+        string question2 = "What is your last name?";
+        Console.Write(question2 + " ");
+        var lastName = Console.ReadLine();
 
-
-        //readLine
-        System.Console.WriteLine("What's your age?");
-        var ageString = Console.ReadLine();
-
-        //Converting Variables
-        var age = int.Parse(ageString);
-
-        //Conditionals
-        if (age < 18) { //curly braces creates blocks
-            System.Console.WriteLine("You're a minor");
-            System.Console.WriteLine("And you're cringe");
-        }
-        else{
-            System.Console.WriteLine("You're Old");
-        }
-        
+        Console.WriteLine("Your name is " + lastName + ", " + firstName + " " + lastName);
+       
         }
     }
-}

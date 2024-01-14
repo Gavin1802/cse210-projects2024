@@ -1,1 +1,13 @@
-Hi Git, I'm Gavin
+string question1 = "What is your first name?";
+
+        Console.Write("");
+
+
+        //Conditionals
+        if (age < 18) { //curly braces creates blocks
+            System.Console.WriteLine("You're a minor");
+            System.Console.WriteLine("And you're cringe");
+        }
+        else{
+            System.Console.WriteLine("You're Old");
+        }
