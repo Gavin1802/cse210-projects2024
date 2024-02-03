@@ -1,0 +1,10 @@
+using System;
+using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+
+public class Job {
+    string _company;
+    string _jobTitle;
+    
+
+}

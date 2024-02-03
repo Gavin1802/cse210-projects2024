@@ -1,0 +1,13 @@
+using System;
+using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+
+
+namespace MySpace{
+
+    public class Owner {
+        public string name;
+        public string phone;
+        
+    }
+}
