@@ -1,5 +1,3 @@
-using System.ComponentModel.Design.Serialization;
-
 public class Journal
 {
     public List<JournalEntry> entries = new List<JournalEntry>();
