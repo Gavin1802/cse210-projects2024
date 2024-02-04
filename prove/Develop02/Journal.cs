@@ -1,6 +1,16 @@
+using System.ComponentModel.Design.Serialization;
+
 public class Journal
 {
     public List<JournalEntry> entries = new List<JournalEntry>();
+
+    public Journal(){}
+
+    public Journal(string[] importLines){
+        foreach(string line in importLines){
+            entries.Add(new JournalEntry(line));
+        }
+    }
 
     public void WriteEntry() {
         List<string> prompts = new List<string>
@@ -29,12 +39,7 @@ public class Journal
         System.Console.Write("Please enter the date (mm/dd/yy): ");
         string givenDate = Console.ReadLine();
 
-        JournalEntry entry = new JournalEntry
-        {
-            prompt = randomPrompt,
-            response = userResponse,
-            date = givenDate
-        };
+        JournalEntry entry = new JournalEntry(userResponse, randomPrompt, givenDate);
 
         entries.Add(entry);
     }

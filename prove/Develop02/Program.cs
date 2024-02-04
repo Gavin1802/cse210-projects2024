@@ -7,9 +7,10 @@ using System;
 
 class Program
 {
+    public static Journal journal = new Journal();
+    
     static void Main()
     {
-        Journal journal = new Journal();
         //I like how Bro Lynn used a boolean to keep the while loop running
         bool run = true;
 
@@ -33,7 +34,7 @@ class Program
             }
             else if (userChoice == 4) //Load a journal from a file
             {
-                var text = ReadFile();
+                ReadFile();
             }
             else if (userChoice == 5) //Quit the program
             {
@@ -60,10 +61,11 @@ class Program
         return choice;
     }
 
-    static string[] ReadFile() {
+    static void ReadFile() {
         Console.Write("Please enter filename: ");
         var filename = Console.ReadLine();
-        return System.IO.File.ReadAllLines(filename);
+        var lines = System.IO.File.ReadAllLines(filename);
+        journal = new Journal(lines);
     }
 
     static void SaveToFile(string[] text) {
