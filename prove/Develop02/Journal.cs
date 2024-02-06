@@ -26,18 +26,25 @@ public class Journal
 
         //now to choose one at random
         Random random = new Random();
-        //I had to learn how to do this 'random' part below from the 
-        //internet, so this next line is not technically my code :(
-        var randomPrompt = prompts[random.Next(prompts.Count)]; 
+        var prompt = prompts[random.Next(prompts.Count)]; 
 
-        System.Console.WriteLine($"Prompt: {randomPrompt}");
+        System.Console.WriteLine("Do you want to write your own prompt? (yes or no)");
+        var userChoice = System.Console.ReadLine();
+
+        if (userChoice == "yes")
+        {
+            System.Console.Write("Please write your prompt: ");
+            prompt = System.Console.ReadLine();
+        }
+
+        System.Console.WriteLine($"Prompt: {prompt}");
         System.Console.WriteLine("Please enter your response: ");
         var userResponse = Console.ReadLine();
         
         System.Console.Write("Please enter the date (mm/dd/yy): ");
         string givenDate = Console.ReadLine();
 
-        JournalEntry entry = new JournalEntry(userResponse, randomPrompt, givenDate);
+        JournalEntry entry = new JournalEntry(userResponse, prompt, givenDate);
 
         entries.Add(entry);
     }

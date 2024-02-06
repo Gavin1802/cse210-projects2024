@@ -5,6 +5,10 @@ using System;
 // I hope my inexperience isn't too apparent, but I'd like to say that I
 // feel like I understand the principles a lot better because of it.
 
+
+// I could add a section where the user could add their own prompt if they want to respond to a specific thing
+// This could be part of the writeEntry method maybe.
+
 class Program
 {
     public static Journal journal = new Journal();
