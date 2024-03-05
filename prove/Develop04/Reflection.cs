@@ -26,7 +26,7 @@ class Reflection : Activity
         Console.WriteLine("");
         Console.WriteLine($"--- {randomPrompt} ---");
         Console.WriteLine("");
-        base.showSpinner(6); // Spin for 6 seconds before starting reflection
+        showSpinner(6); // Spin for 6 seconds before starting reflection
         Console.Clear();
 
         string[] questions = {
@@ -46,7 +46,7 @@ class Reflection : Activity
             if (DateTime.Now >= endTime)
                 break;
             Console.WriteLine($"> {question}");
-            base.showSpinner(4); // Spin for 4 seconds between questions
+            showSpinner(4); // Spin for 4 seconds between questions
         }
         End();
     }
